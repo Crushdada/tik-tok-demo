@@ -1,0 +1,13 @@
+{
+    "name": "crushdada",
+    "num": 1,
+    "fav": "cats",
+    "likes": [
+        {
+            "color": "red"
+        },
+        {
+            "food": "all"
+        }
+    ]
+}
