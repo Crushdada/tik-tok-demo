@@ -10,6 +10,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import { videoPlayer } from 'vue-video-player'
 import 'swiper/swiper-bundle'
 //视频播放器
+import 'vue-video-player/src/custom-theme.css'
 import 'video.js/dist/video-js.css'
 
 Vue.config.productionTip = false
@@ -21,8 +22,10 @@ new Vue({
   render: h => h(App),
 
   mounted() {
-    axios.get('https://api.apiopen.top/getJoke').then(response => {
-      console.log(response.data.message)
-    })
+    axios
+      .get('https://matthewelvey.spinetail.cdu.edu.au/blog.json')
+      .then(res => {
+        console.log(res.data[0].href)
+      })
   }
 }).$mount('#app')

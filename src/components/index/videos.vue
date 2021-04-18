@@ -1,7 +1,7 @@
 <template>
   <div class="videos">
     <video-player
-      class="video-player vjs-custom-skin"
+      class="video-player vjs-default-skin vjs-big-play-centered"
       ref="videoPlayer"
       :playsinline="true"
       :options="playerOptions"
@@ -16,6 +16,7 @@ export default {
   components: {
     videoPlayer,
   },
+  props: ['videoList'],
   data() {
     return {
       playerOptions: {
@@ -26,8 +27,7 @@ export default {
         fluid: true, // 当true时，Video.js player将拥有流体大小。换句话说，它将按比例缩放以适应其容器。
         sources: [
           {
-            src:
-              'http://video.jishiyoo.com/161b9562c780479c95bbdec1a9fbebcc/8d63913b46634b069e13188b03073c09-d25c062412ee3c4a0758b1c48fc8c642-ld.mp4', // 路径
+            src: this.videoList.url,
             type: 'video/mp4', // 类型
           },
         ],
@@ -35,7 +35,19 @@ export default {
         notSupportedMessage: '此视频暂无法播放，请稍后再试', //允许覆盖Video.js无法播放媒体源时显示的默认信息。
         controlBar: false,
       },
+      playing: false,
     }
+  },
+  methods: {
+    playOrStop() {
+      if (this.playing) {
+        this.$refs.videoPlayer.player.pause()
+        this.playing = false
+      } else {
+        this.$refs.videoPlayer.player.play()
+        this.playing = true
+      }
+    },
   },
 }
 </script>
@@ -43,15 +55,15 @@ export default {
 .videos {
   position: relative;
 }
-.videos .vjs-custom-skin > .video-js .vjs-big-play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.videos .vjs-default-skin > .video-js .vjs-big-play-button {
+  /* position: absolute; */
+  /* top: 50%;
+  left: 50%; */
   width: 40px;
   height: 40px;
-  line-height: 40px;
+  line-height: 1.35em;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 50%;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
 }
 </style>
