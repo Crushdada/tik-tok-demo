@@ -13,7 +13,10 @@
       </span>
     </div>
     <div class="item-icon">
-      <span class="iconfont icon-rightbar-pinglun">
+      <span
+        class="iconfont icon-rightbar-pinglun"
+        @click.stop="showCom($event)"
+      >
         <p>18.0w</p>
       </span>
     </div>
@@ -32,6 +35,12 @@
 <script>
 export default {
   name: 'RightBar',
+  methods: {
+    showCom(e) {
+      e.preventDefault()
+      this.$emit('changeCom')
+    },
+  },
 }
 </script>
 <style>

@@ -10,6 +10,6 @@
   -webkit-font-smoothing: antialiased;
   /* -moz-osx-font-smoothing: grayscale; */
   height: 100%;
-  color: #5f6d7a;
+  /* color: #5f6d7a; */
 }
 </style>

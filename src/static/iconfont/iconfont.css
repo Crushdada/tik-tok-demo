@@ -1,12 +1,11 @@
 @font-face {
-  font-family: 'iconfont'; /* project id 2485427 */
-  src: url('//at.alicdn.com/t/font_2485427_to5do9ebbqb.eot');
-  src: url('//at.alicdn.com/t/font_2485427_to5do9ebbqb.eot?#iefix')
-      format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_2485427_to5do9ebbqb.woff2') format('woff2'),
-    url('//at.alicdn.com/t/font_2485427_to5do9ebbqb.woff') format('woff'),
-    url('//at.alicdn.com/t/font_2485427_to5do9ebbqb.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_2485427_to5do9ebbqb.svg#iconfont') format('svg');
+  font-family: 'iconfont'; /* Project id 2485427 */
+  src: url('//at.alicdn.com/t/font_2485427_an3nb4a2p5k.woff2?t=1624266549118')
+      format('woff2'),
+    url('//at.alicdn.com/t/font_2485427_an3nb4a2p5k.woff?t=1624266549118')
+      format('woff'),
+    url('//at.alicdn.com/t/font_2485427_an3nb4a2p5k.ttf?t=1624266549118')
+      format('truetype');
 }
 .iconfont {
   font-family: 'iconfont' !important;
@@ -42,4 +41,20 @@
 }
 .icon-rightbar-zhuanfa::before {
   content: '\e716';
+}
+/* 评论部分 */
+.icon-comment-xin::before {
+  content: '\e705';
+}
+.icon-comment-emoji::before {
+  content: '\e632';
+}
+/* edit编辑资料 */
+.icon-edit-avatar::before {
+  content: '\e61d';
+}
+/* publish加号发布 */
+
+.icon-publish-top-yinfu::before {
+  content: '\e600';
 }

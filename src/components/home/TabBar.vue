@@ -14,7 +14,10 @@
       >
     </div>
     <div class="item" @click="changeTab(2)">
-      <router-link to="/index" tag="span" :class="tabIndex == 2 ? 'active' : ''"
+      <router-link
+        to="/publish"
+        tag="span"
+        :class="tabIndex == 2 ? 'active' : ''"
         ><img
           class="footer-bar-plus-img"
           src="../../assets/footer-bar-plus-img.png"
@@ -22,12 +25,12 @@
       /></router-link>
     </div>
     <div class="item" @click="changeTab(3)">
-      <router-link to="/index" tag="span" :class="tabIndex == 3 ? 'active' : ''"
+      <router-link to="/msg" tag="span" :class="tabIndex == 3 ? 'active' : ''"
         >消息</router-link
       >
     </div>
     <div class="item" @click="changeTab(4)">
-      <router-link to="/index" tag="span" :class="tabIndex == 4 ? 'active' : ''"
+      <router-link to="/sign" tag="span" :class="tabIndex == 4 ? 'active' : ''"
         >我</router-link
       >
     </div>
